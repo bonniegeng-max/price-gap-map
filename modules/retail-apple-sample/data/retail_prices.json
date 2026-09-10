@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-07T04:37:57Z",
+  "product": "Apple AirTag",
+  "source_type": "Apple public product buy pages with embedded productSelectionData JSON",
+  "comparison_rule": "仅比较同一市场同一币种下的单件价 × 4 与四件装总价，不做跨币种换汇。",
+  "markets": [
+    {
+      "market_code": "CN",
+      "market_name": "中国大陆",
+      "storefront": "Apple Online Store China",
+      "source_url": "https://www.apple.com.cn/shop/buy-airtag/airtag",
+      "fetched_at": "2026-09-07T04:37:57Z",
+      "currency": "CNY",
+      "products": {
+        "1pack": {
+          "pack_key": "1pack",
+          "pack_label": "1 件装",
+          "pack_count": 1,
+          "part_number": "MFE94CH/A",
+          "base_part_number": "MFE94",
+          "seo_url_token": "1-件装",
+          "price_key": "249_00",
+          "currency": "CNY",
+          "display_amount": "RMB 249",
+          "amount": 249.0,
+          "unit_price": 249.0
+        },
+        "4pack": {
+          "pack_key": "4pack",
+          "pack_label": "4 件装",
+          "pack_count": 4,
+          "part_number": "MFEA4CH/A",
+          "base_part_number": "MFEA4",
+          "seo_url_token": "4-件装",
+          "price_key": "849_00",
+          "currency": "CNY",
+          "display_amount": "RMB 849",
+          "amount": 849.0,
+          "unit_price": 212.25
+        }
+      },
+      "comparison": {
+        "single_times_4_amount": 996.0,
+        "four_pack_amount": 849.0,
+        "savings_amount": 147.0,
+        "discount_rate": 0.14759,
+        "four_pack_cheaper": true,
+        "no_fx_conversion": true
+      }
+    },
+    {
+      "market_code": "US",
+      "market_name": "美国",
+      "storefront": "Apple Online Store US",
+      "source_url": "https://www.apple.com/shop/buy-airtag/airtag",
+      "fetched_at": "2026-09-07T04:37:57Z",
+      "currency": "USD",
+      "products": {
+        "1pack": {
+          "pack_key": "1pack",
+          "pack_label": "1 pack",
+          "pack_count": 1,
+          "part_number": "MFE94LL/A",
+          "base_part_number": "MFE94",
+          "seo_url_token": "1-pack",
+          "price_key": "29_00_fp",
+          "currency": "USD",
+          "display_amount": "$29.00",
+          "amount": 29.0,
+          "unit_price": 29.0
+        },
+        "4pack": {
+          "pack_key": "4pack",
+          "pack_label": "4 pack",
+          "pack_count": 4,
+          "part_number": "MFEA4LL/A",
+          "base_part_number": "MFEA4",
+          "seo_url_token": "4-pack",
+          "price_key": "99_00_fp",
+          "currency": "USD",
+          "display_amount": "$99.00",
+          "amount": 99.0,
+          "unit_price": 24.75
+        }
+      },
+      "comparison": {
+        "single_times_4_amount": 116.0,
+        "four_pack_amount": 99.0,
+        "savings_amount": 17.0,
+        "discount_rate": 0.146552,
+        "four_pack_cheaper": true,
+        "no_fx_conversion": true
+      }
+    },
+    {
+      "market_code": "UK",
+      "market_name": "英国",
+      "storefront": "Apple Online Store UK",
+      "source_url": "https://www.apple.com/uk/shop/buy-airtag/airtag",
+      "fetched_at": "2026-09-07T04:37:57Z",
+      "currency": "GBP",
+      "products": {
+        "1pack": {
+          "pack_key": "1pack",
+          "pack_label": "1 pack",
+          "pack_count": 1,
+          "part_number": "MFE94ZM/A",
+          "base_part_number": "MFE94",
+          "seo_url_token": "1-pack",
+          "price_key": "29_00",
+          "currency": "GBP",
+          "display_amount": "£29.00",
+          "amount": 29.0,
+          "unit_price": 29.0
+        },
+        "4pack": {
+          "pack_key": "4pack",
+          "pack_label": "4 pack",
+          "pack_count": 4,
+          "part_number": "MFEA4ZM/A",
+          "base_part_number": "MFEA4",
+          "seo_url_token": "4-pack",
+          "price_key": "99_00",
+          "currency": "GBP",
+          "display_amount": "£99.00",
+          "amount": 99.0,
+          "unit_price": 24.75
+        }
+      },
+      "comparison": {
+        "single_times_4_amount": 116.0,
+        "four_pack_amount": 99.0,
+        "savings_amount": 17.0,
+        "discount_rate": 0.146552,
+        "four_pack_cheaper": true,
+        "no_fx_conversion": true
+      }
+    },
+    {
+      "market_code": "JP",
+      "market_name": "日本",
+      "storefront": "Apple Online Store Japan",
+      "source_url": "https://www.apple.com/jp/shop/buy-airtag/airtag",
+      "fetched_at": "2026-09-07T04:37:57Z",
+      "currency": "JPY",
+      "products": {
+        "1pack": {
+          "pack_key": "1pack",
+          "pack_label": "1個入り",
+          "pack_count": 1,
+          "part_number": "MFE94ZP/A",
+          "base_part_number": "MFE94",
+          "seo_url_token": "1個入り",
+          "price_key": "5480_00",
+          "currency": "JPY",
+          "display_amount": "5,480円",
+          "amount": 5480.0,
+          "unit_price": 5480.0
+        },
+        "4pack": {
+          "pack_key": "4pack",
+          "pack_label": "4個入り",
+          "pack_count": 4,
+          "part_number": "MFEA4ZP/A",
+          "base_part_number": "MFEA4",
+          "seo_url_token": "4個入り",
+          "price_key": "18400_00",
+          "currency": "JPY",
+          "display_amount": "18,400円",
+          "amount": 18400.0,
+          "unit_price": 4600.0
+        }
+      },
+      "comparison": {
+        "single_times_4_amount": 21920.0,
+        "four_pack_amount": 18400.0,
+        "savings_amount": 3520.0,
+        "discount_rate": 0.160584,
+        "four_pack_cheaper": true,
+        "no_fx_conversion": true
+      }
+    },
+    {
+      "market_code": "CA",
+      "market_name": "加拿大",
+      "storefront": "Apple Online Store Canada",
+      "source_url": "https://www.apple.com/ca/shop/buy-airtag/airtag",
+      "fetched_at": "2026-09-07T04:37:57Z",
+      "currency": "CAD",
+      "products": {
+        "1pack": {
+          "pack_key": "1pack",
+          "pack_label": "1 pack",
+          "pack_count": 1,
+          "part_number": "MFE94AM/A",
+          "base_part_number": "MFE94",
+          "seo_url_token": "1-pack",
+          "price_key": "39_00",
+          "currency": "CAD",
+          "display_amount": "$39.00",
+          "amount": 39.0,
+          "unit_price": 39.0
+        },
+        "4pack": {
+          "pack_key": "4pack",
+          "pack_label": "4 pack",
+          "pack_count": 4,
+          "part_number": "MFEA4AM/A",
+          "base_part_number": "MFEA4",
+          "seo_url_token": "4-pack",
+          "price_key": "129_00",
+          "currency": "CAD",
+          "display_amount": "$129.00",
+          "amount": 129.0,
+          "unit_price": 32.25
+        }
+      },
+      "comparison": {
+        "single_times_4_amount": 156.0,
+        "four_pack_amount": 129.0,
+        "savings_amount": 27.0,
+        "discount_rate": 0.173077,
+        "four_pack_cheaper": true,
+        "no_fx_conversion": true
+      }
+    }
+  ],
+  "summary": {
+    "market_count": 5,
+    "currencies": [
+      "CAD",
+      "CNY",
+      "GBP",
+      "JPY",
+      "USD"
+    ],
+    "best_discount_market": {
+      "market_code": "CA",
+      "market_name": "加拿大",
+      "currency": "CAD",
+      "discount_rate": 0.173077,
+      "savings_amount": 27.0
+    }
+  }
+}
