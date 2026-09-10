@@ -29,6 +29,8 @@
   Offer Snapshot v2 真实案例：记录官网 720 元、京东 660 元和苏宁 641.20 元线索，分级保存 2024/2025 历史证据，并明确排除规则。
 - `docs/clawhub-beauty-11-min-protocol.md`
   Offer Snapshot 最小协议：区分现金到手价与赠品净值价；赠品构成未知时净值必须为 `null`。
+- `skills/beauty-offer-auditor/`
+  ClawHub 候选 Skill：审计化妆品大促购买方案，处理套装、赠品、历史 offer、证据等级与失败降级；当前仅在仓库内维护，尚未发布。
 
 ## 为什么先发 GitHub
 
@@ -56,7 +58,7 @@
 - 研究“价差解释型采购助手”是否成立
 - 演示 HTML 原型和报告模板
 - 验证公开数据的抓取、标准化和展示方式
-- 为后续垂直 Skill 打基础
+- 验证并迭代垂直 Skill
 
 不应该把它用于：
 
@@ -76,6 +78,7 @@
 - 双十一化妆品模板：[`templates/beauty-11-report-template/index.html`](./templates/beauty-11-report-template/index.html)
 - 雅诗兰黛 Offer Snapshot 案例：[`docs/beauty-11-real-case.html`](./docs/beauty-11-real-case.html)
 - Offer Snapshot 协议：[`docs/clawhub-beauty-11-min-protocol.md`](./docs/clawhub-beauty-11-min-protocol.md)
+- Beauty Offer Auditor Skill：[`skills/beauty-offer-auditor/README.md`](./skills/beauty-offer-auditor/README.md)
 
 ## 运行方式
 
@@ -105,13 +108,19 @@ python3 -m unittest discover -s tests -v
 
 模板仍位于 `templates/beauty-11-report-template/index.html`。
 
+### 4. Beauty Offer Auditor Skill
+
+Skill 入口为 `skills/beauty-offer-auditor/SKILL.md`，通用示例位于 `skills/beauty-offer-auditor/examples/generic-case.json`。在仓库根目录运行同一测试命令即可校验 Skill 结构、公式与降级规则。该 Skill 尚未发布。
+
 ## 仓库结构
 
 ```text
 price-gap-map-github/
 ├── data/                          # Offer Snapshot 结构化案例
 ├── docs/                          # 协议与可视化真实案例
-├── tests/                         # 协议、公式、证据与排除逻辑测试
+├── tests/                         # 协议、Skill 结构、公式与降级逻辑测试
+├── skills/
+│   └── beauty-offer-auditor/      # ClawHub 候选 Skill（未发布）
 ├── examples/                      # 概念原型与交互式 PRD
 ├── modules/
 │   ├── llm-price-live/           # 公开 LLM 公价样本
@@ -143,7 +152,7 @@ price-gap-map-github/
 2. 十一酒店真实采购版
 3. 更多标准电商 SKU 的跨渠道样本
 4. 更稳的同款识别和证据编号体系
-5. 失败处理、降级策略和可发布的 Skill 入口
+5. 继续验证 Beauty Offer Auditor，补齐发布前兼容性与案例覆盖
 
 详见 [`ROADMAP.md`](./ROADMAP.md)。
 
