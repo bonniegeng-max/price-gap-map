@@ -24,7 +24,11 @@
 - `modules/retail-apple-sample/`
   标准电商商品样本。抓取 Apple 官方公开商品页中的 AirTag 单件装与四件装价格，演示“真实页面抓取 -> 标准化 -> 对比报告”的最小闭环。
 - `templates/beauty-11-report-template/`
-  面向双十一化妆品场景的真实采购报告模板，内含券后价、赠品折算、渠道可信度、版本/临期检查和证据编号体系。
+  面向双十一化妆品场景的采购报告模板。
+- `data/beauty-11-estee-lauder-case.json` + `docs/beauty-11-real-case.html`
+  Offer Snapshot v2 真实案例：记录官网 720 元、京东 660 元和苏宁 641.20 元线索，分级保存 2024/2025 历史证据，并明确排除规则。
+- `docs/clawhub-beauty-11-min-protocol.md`
+  Offer Snapshot 最小协议：区分现金到手价与赠品净值价；赠品构成未知时净值必须为 `null`。
 
 ## 为什么先发 GitHub
 
@@ -70,6 +74,8 @@
 - LLM 公价样本：[`modules/llm-price-live/index.html`](./modules/llm-price-live/index.html)
 - Apple 零售样本：[`modules/retail-apple-sample/report.html`](./modules/retail-apple-sample/report.html)
 - 双十一化妆品模板：[`templates/beauty-11-report-template/index.html`](./templates/beauty-11-report-template/index.html)
+- 雅诗兰黛 Offer Snapshot 案例：[`docs/beauty-11-real-case.html`](./docs/beauty-11-real-case.html)
+- Offer Snapshot 协议：[`docs/clawhub-beauty-11-min-protocol.md`](./docs/clawhub-beauty-11-min-protocol.md)
 
 ## 运行方式
 
@@ -89,14 +95,23 @@ python3 sync.py
 python3 -m unittest tests.test_sync
 ```
 
-### 3. 双十一化妆品模板
+### 3. 双十一化妆品 Offer Snapshot
 
-直接打开 `templates/beauty-11-report-template/index.html`，按 `README.md` 中的步骤替换为真实商品和真实活动数据。
+直接打开 `docs/beauty-11-real-case.html` 查看案例。校验结构化数据、公式、证据分级与排除逻辑：
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+模板仍位于 `templates/beauty-11-report-template/index.html`。
 
 ## 仓库结构
 
 ```text
 price-gap-map-github/
+├── data/                          # Offer Snapshot 结构化案例
+├── docs/                          # 协议与可视化真实案例
+├── tests/                         # 协议、公式、证据与排除逻辑测试
 ├── examples/                      # 概念原型与交互式 PRD
 ├── modules/
 │   ├── llm-price-live/           # 公开 LLM 公价样本
@@ -124,7 +139,7 @@ price-gap-map-github/
 
 优先级按“能形成真实采购价值”而不是“覆盖更多网站”来排：
 
-1. 双十一化妆品真实案例版
+1. 为 Offer Snapshot 补齐带时间戳的结算页与 A 级证据
 2. 十一酒店真实采购版
 3. 更多标准电商 SKU 的跨渠道样本
 4. 更稳的同款识别和证据编号体系
@@ -136,5 +151,6 @@ price-gap-map-github/
 
 - `modules/llm-price-live` 使用 `tokencanopy/price` 的公开价格快照。
 - `modules/retail-apple-sample` 使用 Apple 官方公开商品页中的内嵌 JSON。
+- 美妆案例逐条保存原始 URL、证据等级、局限与排除原因；2024/2025 历史材料不参与当前价格排名。
 
 这些样本仅用于验证口径与产品方向，不构成采购建议的唯一依据。

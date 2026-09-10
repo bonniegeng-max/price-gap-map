@@ -1,0 +1,288 @@
+{
+  "schema_version": "2.0",
+  "model": "offer_snapshot",
+  "case_id": "beauty-11-estee-lauder-anr-50ml",
+  "title": "雅诗兰黛第七代小棕瓶 50ml Offer Snapshot",
+  "snapshot": {
+    "captured_at": null,
+    "time_label": "当前样本采集轮次",
+    "freshness": "unresolved",
+    "freshness_note": "原始页面未提供可复核的统一采集时间；下单前必须重新打开商品页与结算页核验。",
+    "currency": "CNY",
+    "region": "中国大陆"
+  },
+  "normalized_product": {
+    "brand": "雅诗兰黛",
+    "product_name": "特润修护肌活精华露（第七代小棕瓶）",
+    "spec": "50ml",
+    "comparison_unit": "单件 50ml 正装",
+    "variant": "中国大陆公开页面口径",
+    "identity_requirements": [
+      "同为第七代小棕瓶面部精华",
+      "同为 50ml 单件正装",
+      "非眼霜、礼盒、多支装、跨境版或临期清仓"
+    ]
+  },
+  "formula_policy": {
+    "cash_landed_price": "display_price - confirmed_discount + mandatory_cost",
+    "net_effective_cost": "cash_landed_price - gift_net_value",
+    "gift_net_value_rule": "只有赠品 SKU、数量、履约条件和保守参考价值全部已知时才允许计算；任一未知则为 null，不以 0 冒充已计算净值。",
+    "comparison_rule": "当前快照只比较可复核现金到手价；gift_net_value 为 null 时不得输出 net_effective_cost。",
+    "gap_formula": "reference_cash_landed_price - candidate_cash_landed_price",
+    "gap_rate_formula": "gap_amount / reference_cash_landed_price"
+  },
+  "evidence_grade_policy": {
+    "A": "品牌或平台一手页面，商品身份、规格、价格、时间和关键条件可复核",
+    "B": "一手页面但时间、店铺主体、结算条件或部分关键字段缺失",
+    "C": "搜索片段、聚合页或可回链的二手报道，只能支持线索",
+    "D": "回顾性内容、用户内容或关键上下文缺失，只能支持历史背景",
+    "minimum_grade_for_price_comparison": "B",
+    "minimum_grade_for_purchase_recommendation": "A"
+  },
+  "offers": [
+    {
+      "offer_id": "O-CURRENT-OFFICIAL",
+      "period": "current",
+      "channel": "雅诗兰黛官网商城",
+      "seller_identity": "品牌官网",
+      "product_match": "exact",
+      "display_price": 720.0,
+      "confirmed_discount": 0.0,
+      "mandatory_cost": 0.0,
+      "cash_landed_price": 720.0,
+      "gift": {
+        "composition_known": false,
+        "gift_net_value": null,
+        "reason": "当前样本没有稳定、完整的赠品 SKU 与数量清单"
+      },
+      "net_effective_cost": null,
+      "evidence_refs": [
+        "E-CURRENT-OFFICIAL"
+      ],
+      "evidence_grade": "B",
+      "price_comparison_eligible": true,
+      "purchase_recommendation_eligible": false,
+      "exclusion_reasons": [
+        "缺少统一采集时间",
+        "缺少结算页、库存、批次、有效期与赠品构成"
+      ]
+    },
+    {
+      "offer_id": "O-CURRENT-JD",
+      "period": "current",
+      "channel": "京东商品页",
+      "seller_identity": "平台商品页；最终销售与发货主体待结算页复核",
+      "product_match": "exact",
+      "display_price": 660.0,
+      "confirmed_discount": 0.0,
+      "mandatory_cost": 0.0,
+      "cash_landed_price": 660.0,
+      "gift": {
+        "composition_known": false,
+        "gift_net_value": null,
+        "reason": "当前样本没有稳定、完整的赠品 SKU 与数量清单"
+      },
+      "net_effective_cost": null,
+      "evidence_refs": [
+        "E-CURRENT-JD"
+      ],
+      "evidence_grade": "B",
+      "price_comparison_eligible": true,
+      "purchase_recommendation_eligible": false,
+      "exclusion_reasons": [
+        "缺少统一采集时间",
+        "缺少结算页优惠、库存、批次、有效期和最终销售主体确认"
+      ]
+    },
+    {
+      "offer_id": "O-CURRENT-SUNING-CLUE",
+      "period": "current",
+      "channel": "苏宁公开页面线索",
+      "seller_identity": "页面主体与履约责任待确认",
+      "product_match": "claimed_exact",
+      "display_price": 641.2,
+      "confirmed_discount": null,
+      "mandatory_cost": null,
+      "cash_landed_price": null,
+      "gift": {
+        "composition_known": false,
+        "gift_net_value": null,
+        "reason": "页面没有可复核的赠品构成"
+      },
+      "net_effective_cost": null,
+      "evidence_refs": [
+        "E-CURRENT-SUNING"
+      ],
+      "evidence_grade": "C",
+      "price_comparison_eligible": false,
+      "purchase_recommendation_eligible": false,
+      "exclusion_reasons": [
+        "仅能确认公开页面价格线索，无法确认结算可得性",
+        "页面元数据出现产地与保质期异常字段",
+        "销售主体、库存、发票、批次和有效期不完整"
+      ]
+    },
+    {
+      "offer_id": "O-HISTORY-2024",
+      "period": "history",
+      "event_year": 2024,
+      "channel": "第三方消费内容回顾",
+      "seller_identity": "未完整披露",
+      "product_match": "mismatch",
+      "display_price": 607.0,
+      "confirmed_discount": null,
+      "mandatory_cost": null,
+      "cash_landed_price": null,
+      "gift": {
+        "composition_known": false,
+        "gift_net_value": null,
+        "reason": "内容声称75ml正装送75ml小样，但未给出可逐项核验的赠品 SKU、数量与履约规则"
+      },
+      "net_effective_cost": null,
+      "evidence_refs": [
+        "E-HISTORY-2024"
+      ],
+      "evidence_grade": "D",
+      "price_comparison_eligible": false,
+      "purchase_recommendation_eligible": false,
+      "exclusion_reasons": [
+        "75ml 活动与目标 50ml 单件正装规格不一致",
+        "回顾性二手内容，缺少当期结算页与活动规则",
+        "赠品构成与履约条件不完整，不能折算净值",
+        "历史活动不能外推为当前可得报价"
+      ]
+    },
+    {
+      "offer_id": "O-HISTORY-2025",
+      "period": "history",
+      "event_year": 2025,
+      "channel": "第三方促销报道所述保税仓渠道",
+      "seller_identity": "未完整披露",
+      "product_match": "mismatch",
+      "display_price": 249.0,
+      "confirmed_discount": null,
+      "mandatory_cost": null,
+      "cash_landed_price": null,
+      "gift": {
+        "composition_known": false,
+        "gift_net_value": null,
+        "reason": "报道未提供可核验的赠品构成"
+      },
+      "net_effective_cost": null,
+      "evidence_refs": [
+        "E-HISTORY-2025"
+      ],
+      "evidence_grade": "D",
+      "price_comparison_eligible": false,
+      "purchase_recommendation_eligible": false,
+      "exclusion_reasons": [
+        "报道对象为 100ml，和目标 50ml 单件正装不一致",
+        "保税仓渠道与中国大陆品牌官网/平台现货履约口径不同",
+        "缺少订单、结算页、税费、批次与有效期证据",
+        "历史活动不能外推为当前可得报价"
+      ]
+    }
+  ],
+  "comparison": {
+    "reference_offer_id": "O-CURRENT-OFFICIAL",
+    "candidate_offer_id": "O-CURRENT-JD",
+    "basis": "cash_landed_price",
+    "reference_amount": 720.0,
+    "candidate_amount": 660.0,
+    "gap_amount": 60.0,
+    "gap_rate": 0.083333,
+    "lower_display_offer": "O-CURRENT-JD",
+    "net_value_comparison_available": false,
+    "reason": "两项当前样本可按现金口径比较；赠品构成未知，因此不计算净值价。"
+  },
+  "decision": {
+    "result": "有条件采购",
+    "recommended_channel": null,
+    "statement": "京东当前样本的现金展示口径比官网样本低 60 元（约 8.33%），但没有任何渠道达到购买推荐所需的 A 级证据。",
+    "next_checks": [
+      "在同一时间重新打开官网、京东和苏宁商品页",
+      "核对京东最终销售/发货主体、结算价、发票、库存、批次和有效期",
+      "仅在结算页出现完整赠品清单时单独评估赠品；否则继续保持 gift_net_value=null",
+      "苏宁线索只有在主体与结算条件补全后才能进入比较"
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "E-CURRENT-OFFICIAL",
+      "year": null,
+      "source_type": "brand_product_page",
+      "grade": "B",
+      "title": "雅诗兰黛官网商城小棕瓶商品页",
+      "url": "https://www.esteelauder.com.cn/products/35871",
+      "supports": [
+        "当前样本记录的 50ml 官网价格为 720 元"
+      ],
+      "limitations": [
+        "缺少统一采集时间与结算页留档",
+        "页面后续变化时不能用现页反证历史快照"
+      ]
+    },
+    {
+      "evidence_id": "E-CURRENT-JD",
+      "year": null,
+      "source_type": "platform_product_page",
+      "grade": "B",
+      "title": "京东移动商品页：雅诗兰黛第七代小棕瓶 50ml",
+      "url": "https://item.m.jd.com/product/100052776519.html",
+      "supports": [
+        "当前样本记录的 50ml 页面价格为 660 元",
+        "页面可见配送、退货和平台保障信息"
+      ],
+      "limitations": [
+        "缺少统一采集时间与结算页留档",
+        "最终销售主体、优惠资格与批次有效期待确认"
+      ]
+    },
+    {
+      "evidence_id": "E-CURRENT-SUNING",
+      "year": null,
+      "source_type": "platform_public_page",
+      "grade": "C",
+      "title": "苏宁公开大图页：第七代小棕瓶 50ml",
+      "url": "https://m.suning.com/bigimages/12440859183.html",
+      "supports": [
+        "页面出现 50ml 与 641.20 元价格线索"
+      ],
+      "limitations": [
+        "页面元数据异常",
+        "不能证明当前库存、结算可得性与履约主体"
+      ]
+    },
+    {
+      "evidence_id": "E-HISTORY-2024",
+      "year": 2024,
+      "source_type": "secondary_retrospective",
+      "grade": "D",
+      "title": "什么值得买：回望 2024 年双 11 的消费内容",
+      "url": "https://post.m.smzdm.com/p/a7g2zerd/",
+      "supports": [
+        "存在关于 2024 年 75ml 小棕瓶活动的回顾性说法"
+      ],
+      "limitations": [
+        "不是 50ml 目标规格",
+        "不是活动当期一手结算证据",
+        "赠品 SKU 与履约规则不完整"
+      ]
+    },
+    {
+      "evidence_id": "E-HISTORY-2025",
+      "year": 2025,
+      "source_type": "secondary_promotion_article",
+      "grade": "D",
+      "title": "搜狐：双 11 小棕瓶 100ml 保税仓促销报道",
+      "url": "https://news.sohu.com/a/950207380_121123853",
+      "supports": [
+        "存在关于 2025 年 100ml 保税仓促销的二手报道"
+      ],
+      "limitations": [
+        "不是 50ml 目标规格",
+        "渠道、税费、批次、有效期与结算证据不完整"
+      ]
+    }
+  ]
+}
