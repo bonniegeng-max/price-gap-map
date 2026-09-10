@@ -3,6 +3,12 @@
   "model": "offer_snapshot",
   "case_id": "generic-beauty-serum-30ml",
   "example_only": true,
+  "locale_policy": {
+    "language": "user_selected",
+    "region": "configurable",
+    "example_locale": "zh-CN",
+    "note": "本文件仅演示一个中国大陆地区样本；实际语言、地区、币种和渠道必须按用户选择替换。"
+  },
   "snapshot": {
     "captured_at": "2026-01-15T10:00:00+08:00",
     "freshness": "sample",

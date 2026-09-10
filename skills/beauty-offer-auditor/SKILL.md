@@ -1,6 +1,6 @@
 ---
 name: "beauty-offer-auditor"
-description: "Audits cosmetic promotion offers with evidence-graded cash and gift-value comparisons. Invoke for beauty sale, bundle, gift, or historical-offer purchase decisions."
+description: "Audits user-supplied cosmetic offers with evidence-graded price, gift, bundle, and history comparisons. Invoke only for explicit multi-offer audits."
 ---
 
 # 美妆大促 Offer 审计
@@ -9,7 +9,13 @@ description: "Audits cosmetic promotion offers with evidence-graded cash and gif
 
 把用户提供或可公开核验的美妆报价整理为有时间边界的 Offer Snapshot，比较同口径购买方案，并解释价格、套装、赠品、证据和履约条件之间的差异。
 
-当用户要比较化妆品大促、单品/礼盒/套装、赠品价值或历史 offer 时使用。本 Skill 是决策辅助工具，不是实时全网比价器，也不执行交易。
+仅当用户明确要求审计或比较两个及以上候选美妆报价，或明确要求计算现金到手价、拆解套装、核算赠品净值、核验历史促销时使用。本 Skill 是决策辅助工具，不是实时全网比价器，也不执行交易。
+
+不要因一般美妆咨询、产品发现、功效讨论、妆容推荐、趋势讨论、单一商品介绍或普通购物闲聊而触发。候选报价不足两个时，先说明缺少可比较样本，不擅自扩展为全网搜索。
+
+## 语言与地区
+
+默认使用用户当前使用或明确选择的语言输出；引用材料可以保留原文并附必要说明。协议中的中文标题只是维护文档语言，不强制用户输出中文。地区、币种、税费和渠道规则均按用户需求设置，不默认限定中国大陆。
 
 ## 禁止事项
 
