@@ -1,6 +1,6 @@
 ---
 name: "beauty-offer-auditor"
-description: "Audits user-supplied cosmetic offers with evidence-graded price, gift, bundle, and history comparisons. Invoke only for explicit multi-offer audits."
+description: "Compare and audit two or more beauty or cosmetic offers: cash landed price, bundle split, gift net value, and evidence grade. Use for sale-season, live-stream, or duty-free price checks."
 ---
 
 # 美妆大促 Offer 审计
@@ -9,9 +9,19 @@ description: "Audits user-supplied cosmetic offers with evidence-graded price, g
 
 把用户提供或可公开核验的美妆报价整理为有时间边界的 Offer Snapshot，比较同口径购买方案，并解释价格、套装、赠品、证据和履约条件之间的差异。
 
-仅当用户明确要求审计或比较两个及以上候选美妆报价，或明确要求计算现金到手价、拆解套装、核算赠品净值、核验历史促销时使用。本 Skill 是决策辅助工具，不是实时全网比价器，也不执行交易。
+**用户不需要说出“审计”这个词。下列自然问法都应触发：**
 
-不要因一般美妆咨询、产品发现、功效讨论、妆容推荐、趋势讨论、单一商品介绍或普通购物闲聊而触发。候选报价不足两个时，先说明缺少可比较样本，不擅自扩展为全网搜索。
+- 给出两个及以上链接、截图或价格，问“哪个划算”“买哪个”“差在哪”
+- 问某个套装、礼盒或多件装“值不值”“拆开算一件多少钱”
+- 问赠品“算不算钱”“要不要为了赠品多买一件”
+- 问大促场景（双 11、618、直播间、免税店、代购、海淘）某笔报价是否值得下手
+- 问往年活动或历史价格是否说明“现在该买”
+
+本 Skill 是决策辅助工具，不是实时全网比价器，也不执行交易。
+
+候选报价不足两个时不要直接拒答：只有一个报价时，先按审计流程核验它的证据等级与现金口径并指出缺口，再说明缺少对照样本；不得擅自扩展为全网搜索。
+
+不要因一般美妆咨询、产品发现、功效讨论、妆容推荐、趋势讨论或普通购物闲聊而触发。
 
 ## 语言与地区
 
