@@ -44,4 +44,8 @@ python3 -m unittest discover -s tests -v
 - 页面：https://clawhub.ai/bonniegeng-max/skills/beauty-offer-auditor
 - 安装：`openclaw skills install @bonniegeng-max/beauty-offer-auditor`
 
-发布注意：直链可访问不等于被收录。实测观察到，ClawHub 公开广场与搜索里的 96 个 skill 无一带 `beta` 标签，而本 Skill 带 `beta` 标签时确实搜不到；两者是否构成因果尚未单独验证。正式发布时建议使用非预发布版本标签，并在发布后按**精确 slug** 复查是否已进入公开列表。
+发布注意：**publish 返回成功不等于已经公开**。ClawHub 需先完成安全扫描，回执会写 `pending security scans before it becomes public`；扫描期间广场与搜索都查不到。
+
+- 查扫描状态：`clawhub inspect beauty-offer-auditor --json`，看 `moderation.verdict` 是否为 `clean`
+- 复查收录：用**精确 slug** 调公开列表接口；刚发布完公开 API 有缓存延迟，需隔几分钟再下结论
+- 本 Skill 的 1.0.0 发布后已确认进入公开列表；`beta` 标签与收录无关（`beta: 0.1.1` 与 `latest: 1.0.0` 可共存）
