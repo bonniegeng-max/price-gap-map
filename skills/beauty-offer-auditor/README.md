@@ -27,9 +27,11 @@ gap_rate = gap_amount / reference_cash_landed_price
 
 ## 本地校验
 
-在仓库根目录运行：
+测试位于源码仓库的 `tests/`，依赖仓库根目录结构，**不随 ClawHub 分发的归档一起下发**。需要校验时先取得源码：
 
 ```bash
+git clone https://github.com/bonniegeng-max/price-gap-map.git
+cd price-gap-map
 python3 -m unittest discover -s tests -v
 ```
 
@@ -37,4 +39,9 @@ python3 -m unittest discover -s tests -v
 
 ## 状态
 
-当前为仓库内候选 Skill，尚未发布到 ClawHub。
+已发布到 ClawHub：`@bonniegeng-max/beauty-offer-auditor`
+
+- 页面：https://clawhub.ai/bonniegeng-max/skills/beauty-offer-auditor
+- 安装：`openclaw skills install @bonniegeng-max/beauty-offer-auditor`
+
+发布注意：仅带 `beta` 标签的版本不会进入 ClawHub 公开广场与搜索，直链可访问不等于被收录；正式版本需以非 beta 标签发布。

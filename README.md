@@ -30,7 +30,7 @@
 - `docs/clawhub-beauty-11-min-protocol.md`
   Offer Snapshot 最小协议：区分现金到手价与赠品净值价；赠品构成未知时净值必须为 `null`。
 - `skills/beauty-offer-auditor/`
-  ClawHub 候选 Skill：审计化妆品大促购买方案，处理套装、赠品、历史 offer、证据等级与失败降级；当前仅在仓库内维护，尚未发布。
+  ClawHub Skill：审计化妆品大促购买方案，处理套装、赠品、历史 offer、证据等级与失败降级。已发布为 [`@bonniegeng-max/beauty-offer-auditor`](https://clawhub.ai/bonniegeng-max/skills/beauty-offer-auditor)。
 
 ## 为什么先发 GitHub
 
@@ -110,7 +110,7 @@ python3 -m unittest discover -s tests -v
 
 ### 4. Beauty Offer Auditor Skill
 
-Skill 入口为 `skills/beauty-offer-auditor/SKILL.md`，通用示例位于 `skills/beauty-offer-auditor/examples/generic-case.json`。在仓库根目录运行同一测试命令即可校验 Skill 结构、公式与降级规则。该 Skill 尚未发布。
+Skill 入口为 `skills/beauty-offer-auditor/SKILL.md`，通用示例位于 `skills/beauty-offer-auditor/examples/generic-case.json`。在仓库根目录运行同一测试命令即可校验 Skill 结构、公式与降级规则。该 Skill 已发布到 ClawHub：`openclaw skills install @bonniegeng-max/beauty-offer-auditor`。
 
 ## 仓库结构
 
@@ -120,7 +120,7 @@ price-gap-map-github/
 ├── docs/                          # 协议与可视化真实案例
 ├── tests/                         # 协议、Skill 结构、公式与降级逻辑测试
 ├── skills/
-│   └── beauty-offer-auditor/      # ClawHub 候选 Skill（未发布）
+│   └── beauty-offer-auditor/      # ClawHub Skill（已发布）
 ├── examples/                      # 概念原型与交互式 PRD
 ├── modules/
 │   ├── llm-price-live/           # 公开 LLM 公价样本
@@ -152,7 +152,7 @@ price-gap-map-github/
 2. 十一酒店真实采购版
 3. 更多标准电商 SKU 的跨渠道样本
 4. 更稳的同款识别和证据编号体系
-5. 继续验证 Beauty Offer Auditor，补齐发布前兼容性与案例覆盖
+5. 继续迭代 Beauty Offer Auditor：补齐案例覆盖、跟进 ClawHub 使用反馈
 
 详见 [`ROADMAP.md`](./ROADMAP.md)。
 
